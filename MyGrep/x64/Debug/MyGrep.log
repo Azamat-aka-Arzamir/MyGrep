@@ -1,0 +1,3 @@
+﻿  Main.cpp
+C:\Users\Admin\source\repos\MyGrep\MyGrep\Main.cpp(54,29): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+  MyGrep.vcxproj -> C:\Users\Admin\source\repos\MyGrep\x64\Debug\mygrep.exe
