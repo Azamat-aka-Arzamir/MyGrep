@@ -3,8 +3,8 @@
 #include <fstream>
 using namespace std;
 int Find(string source, string toFind);
-string Find(fstream &sourceStream, string find);
 string Find(fstream& sourceStream, string find, string options);
+int FindIgnoringCase(string source, string toFind);
 //Simple exception class for all of my purposes. Contains only getter for description.
 class MyException { private: string description; public: MyException(string _description) { description = _description; }; string GetDescription() { return description; } };
 int main(int argc, char* argv[])
@@ -112,40 +112,6 @@ int FindIgnoringCase(string source, string toFind)
 		}
 	}
 	return -1;
-}
-/// <summary>
-/// returns line from source file where desired string is located
-/// </summary>
-/// <param name="sourceStream">- Stream with opened file</param>
-/// <param name="find">- What to find</param>
-/// <returns>- Full line with desired string</returns>
-string Find(fstream &sourceStream, string find)
-{
-	string output;
-	string line;
-	char lastSymb;
-	while (!( sourceStream).eof())
-	{
-		(sourceStream).get(lastSymb);
-		if (lastSymb == '\n')
-		{
-			if (Find(line, find) != -1)
-			{
-				output += line+'\n';
-			}
-			line = "";
-		}
-		else
-		{
-			line+=lastSymb;
-		}
-	}
-	(sourceStream).close();
-	if (output != "")
-	{
-		return output;
-	}
-	throw MyException("Not Found");
 }
 /// <summary>
 /// Returns line from source file where desired string is located. Options is string that starts with "-o"(options) and contains letters:
