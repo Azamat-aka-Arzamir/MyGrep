@@ -53,7 +53,6 @@ int main(int argc, char* argv[])
 	{
 		cout << e.GetDescription();
 	}
-
 	return 0;
 }
 /// <summary>
