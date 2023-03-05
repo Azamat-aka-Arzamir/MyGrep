@@ -1,4 +1,7 @@
 # MyGrep
+
+Made by Armas Khaianen 22TietoA aka Armas Haajanen aka Arzamas aka arzamir aka azamat aka roundabout aka...
+
 master/mygrep.exe
 There are both release standalone application and a textfile with sample text in main folder,
 so you can check if it works by launching mygrep.exe in main folder.
